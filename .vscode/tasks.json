@@ -11,7 +11,9 @@
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
 
-                "-DSAMPLE"
+                // "-DSAMPLE"
+                // "-DSAMPLE2"
+                "-DSAMPLE3"
             ],
             "options": {
                 "cwd": "${fileDirname}"

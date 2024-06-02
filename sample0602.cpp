@@ -1,4 +1,17 @@
 #include <iostream>
+using namespace std;
+
+int a = 0; // グローバル変数
+
+void func(){
+    int b = 0; // ローカル変数
+    static int c = 0; // ローカル変数にstaticをつけると、グローバル変数と同じ記憶寿命になる。
+
+    cout << "変数aは" << a << "変数bは" << b << "変数cは" << c << "です" << endl;
+    a++;
+    b++;
+    c++;
+}
 
 int main(){
     // C++のバージョン確認
@@ -12,9 +25,23 @@ int main(){
     // これをtry-catchで捕捉することはできません。
     int arr[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     int value = arr[15];  // 配列の範囲外アクセス
-    std::cout << "Value: " << value << std::endl;
+    cout << "Value: " << value << endl;
     // 範囲外アクセスを避けるためには、配列のインデックスが配列のサイズ以内であることを確認する必要があります。
-    std::cout << "正常終了？";
+    cout << "正常終了？";
 #endif
+
+#ifdef SAMPLE2
+    // intの範囲を超えた代入をしても、実行時にエラーにはならない。
+    int i = 9999999999999999999999;
+    cout << i << endl;
+    cout << "正常終了？";
+#endif
+
+#ifdef SAMPLE3
+    for (int i=0; i<5; i++){
+        func();
+    }
+#endif
+
     return 0;
 }
