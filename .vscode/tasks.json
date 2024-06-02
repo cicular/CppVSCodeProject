@@ -13,7 +13,7 @@
 
                 // "-DSAMPLE"
                 // "-DSAMPLE2"
-                "-DSAMPLE3"
+                "-DSAMPLE4"
             ],
             "options": {
                 "cwd": "${fileDirname}"

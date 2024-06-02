@@ -4,7 +4,7 @@ using namespace std;
 int a = 0; // グローバル変数
 
 void func(){
-    int b = 0; // ローカル変数
+    int b = 0; // ローカル変数　通常、スタック領域に確保される。
     static int c = 0; // ローカル変数にstaticをつけると、グローバル変数と同じ記憶寿命になる。
 
     cout << "変数aは" << a << "変数bは" << b << "変数cは" << c << "です" << endl;
@@ -41,6 +41,16 @@ int main(){
     for (int i=0; i<5; i++){
         func();
     }
+#endif
+
+// 宣言子と間接参照演算子
+#ifdef SAMPLE4
+    int aa = 1;
+    int *bb; // 宣言子
+    bb = &aa;
+    *bb = 3; // 間接参照演算子
+    cout << aa << endl;
+    cout << bb << endl;
 #endif
 
     return 0;
