@@ -1,5 +1,4 @@
 #include "sample0603.hpp"
-// using namespace std;
 
 int Sample0603::privateMethod(){
     cout << "privateMethod called!" << endl;

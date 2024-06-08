@@ -100,6 +100,19 @@ launch.json
 
 -------------------------------------
 
+a.cppがa.hppをインクルードしている。
+a.hppは、
+#include <iostream>
+using namespace std;
+と書いている。
+
+この時、a.cppで改めて
+#include <iostream>
+using namespace std;
+と書く必要はない。
+
+-------------------------------------
+
 ・ポインタについて
 int *b; →宣言されるのはbという変数であり、*bという変数ではない。*は宣言子である。
 *には2つの意味がある。
