@@ -10,12 +10,13 @@
                 "UNICODE",
                 "_UNICODE",
                 // c_cpp_propertiesのコンパイルスイッチ設定
-                "SAMPLE4"
+                "SAMPLE4",
+                "S0608_02"
             ],
             "windowsSdkVersion": "10.0.22621.0",
             "compilerPath": "cl.exe",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
+            // "cStandard": "c17",
+            "cppStandard": "c++14", // C++のバージョンは201402、つまりC++14
             "intelliSenseMode": "windows-msvc-x64"
         }
     ],
