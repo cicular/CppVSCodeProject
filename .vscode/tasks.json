@@ -2,22 +2,23 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: g++.exe アクティブなファイルのビルド",
+            "label": "Build1",
             "command": "C:\\Program Files\\mingw64\\bin\\g++.exe",
             "args": [
-                "-fdiagnostics-color=always",
+                // "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                // "${file}",
+                "${workspaceFolder}/sample0628/sample0628.cpp",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                // "${fileDirname}\\${fileBasenameNoExtension}.exe",
 
                 // "-DSAMPLE"
                 // "-DSAMPLE2"
                 "-DS0608_02"
             ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
+            // "options": {
+            //     "cwd": "${fileDirname}"
+            // },
             "problemMatcher": [
                 "$gcc"
             ],
