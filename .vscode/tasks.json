@@ -4,11 +4,16 @@
             "type": "cppbuild",
             "label": "Build1",
             "command": "C:\\Program Files\\mingw64\\bin\\g++.exe",
+            // args:実行するコマンドに渡す引数を指定しています。
             "args": [
                 // "-fdiagnostics-color=always",
+                // -g:コンパイルの際にdebugのための情報を持ったファイルを生成します。
+                // この指定がなくてもビルドはできますが、
+                // 後々プログラムを書くことを考えたら追加しておいたほうがいいでしょう。
                 "-g",
                 // "${file}",
                 "${workspaceFolder}/sample0628/sample0628.cpp",
+                // コンパイル後のファイルの名前をこちらで指定します。
                 "-o",
                 // "${fileDirname}\\${fileBasenameNoExtension}.exe",
 
@@ -22,6 +27,8 @@
             "problemMatcher": [
                 "$gcc"
             ],
+            // group:このタスクをbuildのタスクとする。
+            // ⌘+shift+Bでビルドのタスクを走らせることができるのですが、その時にこのファイルのタスクを実行します。ということです。
             "group": {
                 "kind": "build",
                 "isDefault": true
